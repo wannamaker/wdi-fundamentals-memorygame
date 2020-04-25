@@ -1,24 +1,32 @@
-//console.log("Up and running!");
 
-/*
-let cardOne = "queen";
-let cardTwo = "queen";
 
-let cardThree = "king";
-let cardFour = "king";
+const cards = [
+{
+rank: "queen",
+suit: "hearts",
+cardsImages: "images/queen-of-hearts.png"
+},
+{
+rank: "queen",
+suit: "diamonds",
+cardsImages: "images/queen-of-diamonds.png"
+},
+{
+rank: "king",
+suit: "hearts",
+cardsImages: "images/king-of-hearts.png"
+},
+{
+rank: "king",
+suit: "king-of-diamonds",
+cardsImages: "images/king-of-diamonds.png"
+}
+];
 
-//console.log("User flipped" + cardOne);
 
-//console.log("User flipped" + cardTwo);
-*/
 
-const cards = ["queen", "queen", "king", "king"];
 const cardsInPlay = [];
 
-/*
-
-
-*/
 
 function checkForMatch() {
 
@@ -32,40 +40,22 @@ function checkForMatch() {
 
 function flipCard(cardId) {
 
-//let cardOne = cards[0];
+cardsInPlay.push(cards[cardId].rank);
+console.log("User flipped " + cards[cardId].rank);
 
-
-
-//cardsInPlay.push(cardOne);
-
-//console.log("User flipped queen");
-
-//let cardTwo = cards[2]
-
-//cardsInPlay.push(cardOne);
-
-//console.log("User flipped king");
-
-//console.log("user flipped " + cards[cardId]);
-
-cardsInPlay.push(cards[cardId]);
-console.log("User flipped " + cards[cardId]);
+console.log(cards[cardId].cardsImages);
+console.log(cards[cardId].suit);
 
 checkForMatch();
 
-/*
-let twoCardsPlay = false;
-if (cardsInPlay.length === 2){
-	twoCardsPlay = true;
 
-	
-}
-*/
+
 
 };
 
 flipCard(0);
 flipCard(2);
+
 
 
 
